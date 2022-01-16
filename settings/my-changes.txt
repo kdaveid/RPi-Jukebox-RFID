@@ -1,0 +1,23 @@
+sudo vim /boot/config.txt
+
+sudo update-rc.d exim4 remove
+
+sudo sh -c "  cat >> /etc/dhcpcd.conf << EOF
+noarp
+ipv4only
+EOF"
+
+sudo systemctl disable wifi-country.service
+sudo systemctl disable triggerhappy.service
+sudo systemctl disable hciuart.service
+sudo systemctl disable avahi-daemon.service
+sudo systemctl disable sys-kernel-debug.mount
+sudo systemctl disable systemd-udev-trigger.service
+sudo systemctl disable rpi-eeprom-update.service
+sudo systemctl disable rsyslog.service
+sudo systemctl disable systemd-journald.service
+sudo systemctl disable systemd-fsck-root.service
+sudo update-rc.d exim4 remove
+
+sudo reboot now
+

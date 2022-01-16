@@ -16,3 +16,4 @@ dev_id = int(input('Device Number: '))
 with open(path + '/deviceName.txt', 'w') as f:
     f.write(devices[dev_id].name)
     f.close()
+

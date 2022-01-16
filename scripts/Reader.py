@@ -194,7 +194,7 @@ class Reader(object):
             elif device_name == 'RDM6300':
                 # The Rdm6300Reader supports 2 Additional Number Formats which can bee choosen by an optional parameter dictionary:
                 # {'numberformat':'card_id_float'} or {'numberformat':'card_id_dec'}
-                self.reader = Rdm6300Reader()
+                self.reader = Rdm6300Reader({'numberformat':'card_id_dec'})
             elif device_name == 'PN532':
                 self.reader = Pn532Reader()
             else:
